@@ -1,0 +1,78 @@
+.navbar {
+
+    padding: 15px 70px 15px 70px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   
+}
+
+.upper-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    border-radius: 50px;
+    background-color: rgba(238, 234, 234, 0.981);
+    transition: width 0.3s ease; /* Add transition for smooth effect */
+    min-width: 1.5rem;
+}
+
+.search-container input {
+    padding: 8px;
+    border: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(238, 234, 234, 0.981);
+    border-radius: 50px;
+    outline: none; /* Removes the outline */
+}
+.search-container:focus-within {
+    width: 40%; /* Increase width on focus */
+}
+.search-container button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.user-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+
