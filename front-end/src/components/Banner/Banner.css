@@ -1,0 +1,33 @@
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banners-cycle{
+  background-color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  width:1000px;
+}
+.banners-cycle > img{
+    width: 1000px;
+    height: 36rem;
+}
+
+.cycle-button{
+
+    background-color: #fff;
+    border: none;
+}
+.icon{
+    height: 80px;
+    width: 80px;
+    transition-property: width, height;
+    transition-duration: 0.3s;
+
+}
+
+.icon:hover{
+    width: 100px;
+    height: 100px;
+}
