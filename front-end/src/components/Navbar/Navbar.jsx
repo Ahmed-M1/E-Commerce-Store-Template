@@ -9,8 +9,10 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="upper-navbar">
           <div className="logo">
-            <img src={logo} alt="Logo" />
-            <span>Decoràyte</span>
+            <a href="/">
+              <img src={logo} alt="Logo" />
+              <span>Decoràyte</span>
+            </a>
           </div>
 
           <div className="search-container">

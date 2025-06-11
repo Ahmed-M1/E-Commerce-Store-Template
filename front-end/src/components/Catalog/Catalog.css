@@ -1,0 +1,16 @@
+.catalog-container{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.catalog-header{
+    margin: 20px 0; /* Spacing above and below */
+    letter-spacing: 2px; /* Adds space between letters */
+    text-align: center;
+}
+.catalog{
+    padding-top: 40px;
+}

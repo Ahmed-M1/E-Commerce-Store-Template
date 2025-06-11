@@ -29,12 +29,18 @@ header{
     align-items: center;
     gap: 10px;
 }
-.logo > img{
+.logo > a {
+    text-decoration: none;
+    color: #6A4F4D; /* A warm, earthy color that matches the logo */
+    display: flex;
+    align-items: center;
+}
+.logo > a > img{
     height: 60px;
     border-radius: 50px;
 
 }
-.logo > span {
+.logo > a > span {
     font-family: "Edu VIC WA NT Hand Pre", cursive;
     font-optical-sizing: auto;
     font-weight: 700;

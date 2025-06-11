@@ -1,0 +1,66 @@
+
+.catalog-item{
+    width: 15rem;
+    height: 20rem;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:  #b5aeae;
+    padding: 20px;
+    border-style: solid;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.catalog-item:hover{
+    background-color: #d0cfcf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    cursor: pointer;
+
+
+}
+.catalog-item-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 30%;
+    min-height:40%;
+    gap:5px;
+    margin-top:auto;
+    margin-bottom: 10px;
+
+}
+.catalog-item-details > h1{
+    text-align: center;
+    font-size: 80%;
+    margin:auto;
+}
+.catalog-item-details > h2{
+    text-align: center;
+    font-size: 80%;
+    margin:auto;
+}
+.catalog-item-image{
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 3%;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    min-height: 13rem;
+    width: 10rem;
+    background-color: rgba(255, 255, 255, 0.981);
+}
+.catalog-item-link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+}

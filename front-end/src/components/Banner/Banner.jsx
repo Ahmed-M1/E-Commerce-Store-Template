@@ -20,6 +20,36 @@ export default function Banner() {
   const ref_banners_cycle = useRef(null);
   //Scroll to the next banner
   function scrollToNext() {
+    //Correct the scroll if it is stuck between two banners
+    if (ref_banners_cycle.current) {
+      const clientWidth = ref_banners_cycle.current.clientWidth;
+      const scrollLeft = ref_banners_cycle.current.scrollLeft;
+
+      // If the scroll position is not at the start, correct it
+      if (scrollLeft % clientWidth !== 0) {
+        ref_banners_cycle.current.scrollTo({
+          left: Math.round(scrollLeft / clientWidth) * clientWidth,
+          behavior: "smooth",
+        });
+        return;
+      }
+    }
+
+    //If the end of cycle is reached, reset the scroll position
+    if (ref_banners_cycle.current) {
+      const scrollWidth = ref_banners_cycle.current.scrollWidth;
+      const clientWidth = ref_banners_cycle.current.clientWidth;
+      const scrollLeft = ref_banners_cycle.current.scrollLeft;
+
+      if (scrollLeft + clientWidth >= scrollWidth) {
+        ref_banners_cycle.current.scrollTo({
+          left: 0,
+          behavior: "smooth",
+        });
+        return;
+      }
+    }
+
     if (ref_banners_cycle.current) {
       ref_banners_cycle.current.scrollBy({
         left: ref_banners_cycle.current.offsetWidth,
@@ -29,6 +59,20 @@ export default function Banner() {
   }
   //Scroll to the previous banner
   function scrollToPrev() {
+    //Correct the scroll if it is stuck between two banners
+    if (ref_banners_cycle.current) {
+      const clientWidth = ref_banners_cycle.current.clientWidth;
+      const scrollLeft = ref_banners_cycle.current.scrollLeft;
+
+      // If the scroll position is not at the start, correct it
+      if (scrollLeft % clientWidth !== 0) {
+        ref_banners_cycle.current.scrollTo({
+          left: Math.round(scrollLeft / clientWidth) * clientWidth,
+          behavior: "smooth",
+        });
+        return;
+      }
+    }
     if (ref_banners_cycle.current) {
       ref_banners_cycle.current.scrollBy({
         left: -ref_banners_cycle.current.offsetWidth,
@@ -44,15 +88,25 @@ export default function Banner() {
     }
   }
 
+  setInterval(function () {
+    scrollToNext();
+  }, 4000);
+
   return (
     <div className="banner">
-      <button className="cycle-button" onClick={() => cycleBanners("prev")}>
+      <button
+        className="cycle-button prev"
+        onClick={() => cycleBanners("prev")}
+      >
         <IoIosArrowBack className="icon" />
       </button>
       <div className="banners-cycle" ref={ref_banners_cycle}>
         {banners_cycle}
       </div>
-      <button className="cycle-button" onClick={() => cycleBanners("next")}>
+      <button
+        className="cycle-button next"
+        onClick={() => cycleBanners("next")}
+      >
         <IoIosArrowForward className="icon" />
       </button>
     </div>

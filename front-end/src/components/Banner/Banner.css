@@ -7,11 +7,13 @@
   background-color: #333;
   overflow: hidden;
   white-space: nowrap;
-  width:1000px;
+  min-width:1000px;
+  max-width:1000px;
 }
 .banners-cycle > img{
-    width: 1000px;
-    height: 36rem;
+    min-width: 1000px;
+    min-height: 70vh;
+    max-height: 70vh;
 }
 
 .cycle-button{
@@ -30,4 +32,39 @@
 .icon:hover{
     width: 100px;
     height: 100px;
+}
+
+/* Now for mobile devices no transition in mobile*/
+@media (max-width: 1053px) {
+
+    .banners-cycle > img {
+        min-width: 50vh;
+        max-width: 50vh;
+    }
+    .banners-cycle{
+        min-width: 50vh;
+        max-width: 50vh;
+        margin: 2px;
+    }
+    .cycle-button{
+        width: 50px;
+        height: 50px;
+    }
+    .prev{
+        margin-left: 2px;
+    }
+    .next{
+        margin-right: 2px;
+    }
+    .icon{
+        width: 40px;
+        height: 40px;
+        transition-property: color;
+        transition-duration: 0.4s;
+    }
+    .icon:hover{
+        width: 40px;
+        height: 40px;
+        color: #007BFF;
+}
 }
