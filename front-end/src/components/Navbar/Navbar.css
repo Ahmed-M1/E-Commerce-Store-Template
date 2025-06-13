@@ -5,6 +5,8 @@
 }
 header{
       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      position:fixed;
+      width: 100%;
 }
 .upper-navbar{
     padding-left: 5px;
