@@ -1,7 +1,7 @@
 
 .catalog-item{
     width: 15rem;
-    height: 20rem;
+    height: 23rem;
     border-radius: 3%;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
     transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    cursor: pointer;
+    
 
 
 }
@@ -40,9 +40,13 @@
     margin:auto;
 }
 .catalog-item-details > h2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     font-size: 80%;
     margin:auto;
+    font-weight: bold;
+    color: rgb(214, 62, 62);
+    margin-bottom:10px;
 }
 .catalog-item-image{
     border-style: solid;
@@ -56,6 +60,11 @@
     width: 10rem;
     background-color: rgba(255, 255, 255, 0.981);
 }
+.catalog-item-image:hover{
+
+    cursor: pointer;
+
+}
 .catalog-item-link{
     text-decoration: none;
     color: black;
@@ -63,4 +72,19 @@
     font-size: 1.2rem;
     margin-top: 10px;
     text-align: center;
+}
+.add-to-cart{
+    margin-top: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 4px;
+    border-style: none;
+    padding: 4px;
+    background-color: #72b2cb;
+    height:30px;
+    width:100px;
+}
+.add-to-cart:hover{
+
+    background-color: #00b2f8;
+    cursor:pointer;
 }

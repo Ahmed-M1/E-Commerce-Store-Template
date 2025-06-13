@@ -1,9 +1,11 @@
 import { CiShoppingCart, CiUser, CiSearch } from "react-icons/ci";
+import { useContext } from "react";
+import { CartContext } from "../../context/cart";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 export default function Navbar() {
   const userName = "Login / Sign Up"; // This can be replaced with a dynamic value from your state or props
-
+  const { cartItems } = useContext(CartContext);
   return (
     <header>
       <nav className="navbar">
@@ -25,6 +27,11 @@ export default function Navbar() {
           <div className="user-icons">
             <div className="cart-icon">
               <CiShoppingCart size={30} />
+              {cartItems.length > 0 && (
+                <span className="cart-counter">
+                  {cartItems.length > 0 ? cartItems.length : null}
+                </span>
+              )}
               <span>Cart</span>
             </div>
             <div className="search-icon">

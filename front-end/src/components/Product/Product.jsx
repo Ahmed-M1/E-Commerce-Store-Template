@@ -1,6 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "../../context/cart";
 import "./Product.css";
+
 export default function Product(props) {
+  const { cartItems, addToCart } = useContext(CartContext);
   const [product, setProduct] = useState({});
   useEffect(() => {
     // You can fetch product details using the productId and display them here
@@ -20,7 +23,7 @@ export default function Product(props) {
     };
     fetchProductDetails();
   }, []);
-  console.log(product);
+
   const style = {
     backgroundImage: `url(${product.image})`,
   };
@@ -34,6 +37,12 @@ export default function Product(props) {
           <h1 className="product-title">{product.title}</h1>
           <h2 className="product-price">Rs{product.price}</h2>
           <p className="product-description">{product.description}</p>
+          <button
+            onClick={() => addToCart(product)}
+            className="add-to-cart product-button"
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </>

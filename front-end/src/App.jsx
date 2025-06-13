@@ -3,9 +3,11 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import ProductPage from "./pages/ProductPage";
 import "./App.css";
+import { useEffect, useState } from "react";
 // import About from "./pages/About";
 // import Contact from "./pages/Contact";
 function App() {
+  const [cartItems, setCartItems] = useState([]);
   return (
     <BrowserRouter>
       <Routes>

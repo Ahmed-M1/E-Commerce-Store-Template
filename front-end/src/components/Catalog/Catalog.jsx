@@ -22,7 +22,6 @@ export default function Catalog(props) {
     };
     fetchProducts();
   }, []);
-  console.log(products);
   const catalogItems = products.map((product) => (
     <CatalogItem key={product.id} product={product} />
   ));
