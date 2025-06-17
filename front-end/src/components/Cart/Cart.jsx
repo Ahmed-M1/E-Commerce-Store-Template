@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/cart";
+import clsx from "clsx";
 import PropTypes from "prop-types";
+
 import "./Cart.css";
 export default function Cart({ showModal, toggle }) {
   const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal } =
@@ -17,7 +19,12 @@ export default function Cart({ showModal, toggle }) {
               Close
             </button>
           </div>
-          <div className="cart-items-container">
+          <div
+            className={clsx({
+              "cart-items-container": true,
+              " empty-cart": cartItems < 1,
+            })}
+          >
             {cartItems.map((item) => (
               <div className="item-wrapper" key={item.id}>
                 <div className="item-cart-info">
@@ -52,6 +59,9 @@ export default function Cart({ showModal, toggle }) {
                 </div>
               </div>
             ))}
+            {cartItems < 1 && (
+              <h2 className="empty-cart">You Cart is Empty :(</h2>
+            )}
           </div>
           {/* {cartItems.length > 0 ? (
           <div className="">
