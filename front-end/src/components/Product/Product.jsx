@@ -3,7 +3,7 @@ import { CartContext } from "../../context/cart";
 import "./Product.css";
 
 export default function Product(props) {
-  const { cartItems, addToCart } = useContext(CartContext);
+  const { cartItems, addToCart, toggle } = useContext(CartContext);
   const [product, setProduct] = useState({});
   useEffect(() => {
     // You can fetch product details using the productId and display them here
@@ -38,7 +38,10 @@ export default function Product(props) {
           <h2 className="product-price">Rs{product.price}</h2>
           <p className="product-description">{product.description}</p>
           <button
-            onClick={() => addToCart(product)}
+            onClick={() => {
+              addToCart(product);
+              toggle();
+            }}
             className="add-to-cart product-button"
           >
             Add to Cart

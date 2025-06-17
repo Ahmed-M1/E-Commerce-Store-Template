@@ -8,6 +8,10 @@ export const CartProvider = ({ children }) => {
     const savedCartItems = localStorage.getItem("cartItems");
     return savedCartItems ? JSON.parse(savedCartItems) : [];
   });
+  const [showModal, setShowModal] = useState(false);
+  const toggle = () => {
+    setShowModal(!showModal);
+  };
 
   const addToCart = (item) => {
     const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
@@ -64,6 +68,8 @@ export const CartProvider = ({ children }) => {
         removeFromCart,
         clearCart,
         getCartTotal,
+        showModal,
+        toggle,
       }}
     >
       {children}

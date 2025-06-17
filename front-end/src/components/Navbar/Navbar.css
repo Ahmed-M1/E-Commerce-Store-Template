@@ -2,11 +2,10 @@
     padding: 15px 70px 15px 70px;
     background-color: #fff;
     
+    
 }
 header{
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      position:fixed;
-      width: 100%;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
 }
 .upper-navbar{
     padding-left: 5px;
@@ -114,11 +113,10 @@ header{
 }
 
 .user-icons > div{
-
     display: flex;
     align-items: center;
     gap: 5px;
-    cursor: pointer;
+
 }
 .cart-counter{
     margin-left:-10px;
@@ -132,5 +130,24 @@ header{
 }
 
 
+.cart-icon {
+    border-style: none;
+    background-color: inherit;
+    padding:5px;
+    cursor: pointer;
+    margin-left:2px;
+}
 
+/* .cart-icon > button{
+    background-color: inherit;
+    border-style: none;
+    padding: 0px;
+    cursor: pointer;
+    padding:0px;
+} */
 
+.cart-icon:hover{
+    background-color: rgba(238, 234, 234, 0.981);
+    border-radius: 50px;
+
+}

@@ -5,7 +5,7 @@ export default function CatalogItem(props) {
   const style = {
     backgroundImage: `url(${props.product.image})`,
   };
-  const { cartItems, addToCart } = useContext(CartContext);
+  const { addToCart, toggle } = useContext(CartContext);
   return (
     <div className="catalog-item">
       <a href={`/product/${props.product.id}`} className="catalog-item-link">
@@ -15,7 +15,10 @@ export default function CatalogItem(props) {
         <h1>{props.product.title}</h1>
         <h2>Rs{props.product.price}</h2>
         <button
-          onClick={() => addToCart(props.product)}
+          onClick={() => {
+            addToCart(props.product);
+            toggle();
+          }}
           className="add-to-cart"
         >
           Add to Cart

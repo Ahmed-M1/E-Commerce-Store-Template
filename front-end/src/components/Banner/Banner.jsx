@@ -93,7 +93,7 @@ export default function Banner() {
   }, 4000);
 
   return (
-    <div className="banner">
+    <div className="banner-custom">
       <button
         className="cycle-button prev"
         onClick={() => cycleBanners("prev")}
