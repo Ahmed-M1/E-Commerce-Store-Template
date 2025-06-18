@@ -1,5 +1,4 @@
 import "./Banner.css";
-import banner from "../../assets/banner.webp";
 import { useState, useRef } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 

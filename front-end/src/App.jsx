@@ -1,18 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Shopping from "./pages/Shopping";
 import Contact from "./pages/Contact";
 import ProductPage from "./pages/ProductPage";
 import "./App.css";
-import { useEffect, useState } from "react";
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
+
 function App() {
-  const [cartItems, setCartItems] = useState([]);
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        {/* {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/:page_name" element={<Shopping />} />
+        <Route path="/" element={<Shopping />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product/:id" element={<ProductPage />} />
       </Routes>

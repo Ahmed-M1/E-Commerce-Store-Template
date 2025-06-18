@@ -2,9 +2,10 @@ import CatalogItem from "../CatalogItem/CatalogItem";
 import { useEffect, useState } from "react";
 import "./Catalog.css";
 export default function Catalog(props) {
-  // This is the Home page component that renders the Navbar, Banner, and Catalog components.
-  // Will fetch the top products from the API and pass them to the Catalog component.
   const [products, setProducts] = useState([]);
+
+  //Things to do:
+  //If the page_name is invalid meaning no data exists for it then throw error
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -32,7 +33,7 @@ export default function Catalog(props) {
 
   return (
     <section className="catalog">
-      <h1 className="catalog-header">Top Products</h1>
+      <h1 className="catalog-header">{props.heading}</h1>
       <div className="catalog-container">{catalogItems}</div>
     </section>
   );

@@ -1,5 +1,5 @@
 import "./CatalogItem.css";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { CartContext } from "../../context/cart";
 export default function CatalogItem(props) {
   const style = {

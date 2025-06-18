@@ -1,5 +1,5 @@
 import { CiShoppingCart, CiUser, CiSearch } from "react-icons/ci";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CartContext } from "../../context/cart";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
@@ -47,16 +47,16 @@ export default function Navbar() {
         <div className="lower-navbar">
           <ul className="nav-links">
             <li>
-              <a href="#bestsellers">Best sellers</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#home-decor">Home Decor</a>
+              <a href="/home-decor">Home Decor</a>
             </li>
             <li>
-              <a href="#wall-arts">Wall Arts</a>
+              <a href="/wall-arts">Wall Arts</a>
             </li>
             <li>
-              <a href="#lighting">Lighting</a>
+              <a href="/lighting">Lighting</a>
             </li>
           </ul>
         </div>
