@@ -24,6 +24,7 @@ Welcome to the E-Commerce App Template! This project is designed as a starting p
 ## Technologies Used
 
 - **Frontend:**
+
   - React
   - React Router
   - Axios (for API requests) -> TBD
@@ -40,5 +41,6 @@ To get started with this project, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/e-commerce-app-template.git
-   cd e-commerce-app-template
+   git clone https://github.com/Ahmed-M1/E-Commerce-Store-Template.git
+   cd E-Commerce-Store-Template
+   ```
