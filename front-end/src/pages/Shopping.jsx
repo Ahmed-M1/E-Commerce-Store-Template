@@ -11,11 +11,13 @@ export default function Shopping() {
       .replace(/-/g, " ") // Replace hyphens with spaces
       .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize first letter of each word
   }
+
+  //Check if the request is valid with the server
+
   return (
     <>
       <Navbar />
       {page_name ? null : <Banner />}
-      {/*Will have prop that tells it to fetch top products*/}
       <Catalog
         heading={page_name ? formatString(page_name) : "Popular Products"}
       />

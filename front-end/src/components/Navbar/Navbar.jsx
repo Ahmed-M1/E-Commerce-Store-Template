@@ -50,13 +50,13 @@ export default function Navbar() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/home-decor">Home Decor</a>
+              <a href="/Men">Men</a>
             </li>
             <li>
-              <a href="/wall-arts">Wall Arts</a>
+              <a href="/Women">Women</a>
             </li>
             <li>
-              <a href="/lighting">Lighting</a>
+              <a href="/Jewelery">Jewelery</a>
             </li>
           </ul>
         </div>

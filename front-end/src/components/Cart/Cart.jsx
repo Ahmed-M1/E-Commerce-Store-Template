@@ -63,21 +63,20 @@ export default function Cart({ showModal, toggle }) {
               <h2 className="empty-cart">You Cart is Empty :(</h2>
             )}
           </div>
-          {/* {cartItems.length > 0 ? (
-          <div className="">
-            <h1 className="">Total: ${getCartTotal()}</h1>
-            <button
-              className=""
-              onClick={() => {
-                clearCart();
-              }}
-            >
-              Clear cart
-            </button>
-          </div>
-        ) : (
-          <h1 className="">Your cart is empty</h1>
-        )} */}
+          {cartItems.length > 0 && (
+            <div className="">
+              <h1 className="">Total: Rs{getCartTotal()}</h1>
+
+              <button
+                className="clear-cart"
+                onClick={() => {
+                  clearCart();
+                }}
+              >
+                Clear cart
+              </button>
+            </div>
+          )}
         </div>
       </>
     )

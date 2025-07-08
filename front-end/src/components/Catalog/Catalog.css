@@ -14,3 +14,19 @@
 .catalog{
     padding-top: 40px;
 }
+
+.spinner-container{
+    height:70vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.error-display{
+    text-align: center;
+    margin-top:4rem;
+    font-weight: 100;
+
+}
