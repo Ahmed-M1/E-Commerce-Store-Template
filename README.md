@@ -8,10 +8,6 @@ Please if you have any feedback do tell me, as this is my first MERN project.
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Folder Structure](#folder-structure)
-- [API Documentation](#api-documentation)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
