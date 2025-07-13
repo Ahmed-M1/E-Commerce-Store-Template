@@ -1,13 +1,17 @@
 import { CiShoppingCart, CiUser, CiSearch } from "react-icons/ci";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../context/cart";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import Cart from "../Cart/Cart";
+import Login from "../Login/Login";
 export default function Navbar() {
   const userName = "Login / Sign Up"; // This can be replaced with a dynamic value from your state or props
   const { cartItems, showModal, toggle } = useContext(CartContext);
-
+  const [toggleLogin, setToggleLogin] = useState(true);
+  function login_modal() {
+    setToggleLogin((prev) => !prev);
+  }
   return (
     <header>
       <nav className="navbar">
@@ -27,7 +31,7 @@ export default function Navbar() {
           </div>
 
           <div className="user-icons">
-            <div className="cart-icon" onClick={toggle}>
+            <div className="nav-btn" onClick={toggle}>
               <CiShoppingCart size={30} />
               {cartItems.length > 0 && (
                 <span className="cart-counter">
@@ -37,11 +41,12 @@ export default function Navbar() {
               <span>Cart</span>
             </div>
             <Cart showModal={showModal} toggle={toggle} />
-            <div className="search-icon">
+            <div className="nav-btn" onClick={login_modal}>
               <CiUser size={30} />
               <span>{userName}</span>
             </div>
           </div>
+          {toggleLogin && <Login />}
         </div>
 
         <div className="lower-navbar">

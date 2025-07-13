@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Shopping from "./pages/Shopping";
 import Contact from "./pages/Contact";
 import ProductPage from "./pages/ProductPage";
+import Form from "./pages/Form";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Shopping />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/signup" element={<Form />} />
       </Routes>
     </BrowserRouter>
   );

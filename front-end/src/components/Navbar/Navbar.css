@@ -130,7 +130,7 @@ header{
 }
 
 
-.cart-icon {
+.nav-btn {
     border-style: none;
     background-color: inherit;
     padding:5px;
@@ -146,7 +146,7 @@ header{
     padding:0px;
 } */
 
-.cart-icon:hover{
+.nav-btn:hover{
     background-color: rgba(238, 234, 234, 0.981);
     border-radius: 50px;
 

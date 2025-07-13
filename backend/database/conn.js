@@ -14,6 +14,7 @@ try {
   // Connect the client to the server	(optional starting in v4.7)
   conn = await client.connect();
 } catch (e) {
+  console.error("Unable to connect to DB server!");
   console.error(e);
 }
 

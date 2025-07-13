@@ -1,0 +1,15 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+.login-form-container{
+        position: absolute;
+        top: 10%;
+        right: 30vw;
+        left:30vw;
+}
+.form{
+    height:100%;
+    padding:100px;
+    background-color: black;
+}

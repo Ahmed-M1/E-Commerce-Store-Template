@@ -48,13 +48,26 @@ app.get("/:category", (req, res) => {
 
 //POST
 app.post("/user/signup", async (req, res) => {
-  //Save in mongodb
   const users_collection = database.collection("users");
   const data = req.body;
-  const result = await users_collection.insertOne(data);
-  console.log(`A document was inserted with the _id: ${result.insertedId}`);
-  res.end("Successfully Added");
+  console.log(data);
+  try {
+    const result = await users_collection.insertOne(data);
+    console.log(`A document was inserted with the _id: ${result.insertedId}`);
+    res.end("Successfully Added");
+  } catch {
+    res.end("An Error Occured!");
+  }
 });
+
+// //POST
+// app.post("/user/login", async (req, res) => {
+//   const users_collection = database.collection("users");
+//   const data = req.body;
+//   const result = await users_collection.insertOne(data);
+//   console.log(`A document was inserted with the _id: ${result.insertedId}`);
+//   res.end("Successfully Added");
+// });
 
 app.use((req, res) => {
   res.status(404).json({
@@ -63,5 +76,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("Server connected!");
+  console.log("Server running!");
 });
