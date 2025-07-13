@@ -17,9 +17,9 @@ Welcome to the E-Commerce App Template! This project is designed as a starting p
 - User authentication (sign up, log in)
 - Product listing and detail pages
 - Shopping cart functionality
-- Order processing
+- Order processing -tbd
 - Responsive design
-- Admin panel for managing products and orders
+- Admin panel for managing products and orders -tbd
 
 ## Technologies Used
 
