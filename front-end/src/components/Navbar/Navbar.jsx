@@ -8,7 +8,7 @@ import Login from "../Login/Login";
 export default function Navbar() {
   const userName = "Login / Sign Up"; // This can be replaced with a dynamic value from your state or props
   const { cartItems, showModal, toggle } = useContext(CartContext);
-  const [toggleLogin, setToggleLogin] = useState(true);
+  const [toggleLogin, setToggleLogin] = useState(false);
   function login_modal() {
     setToggleLogin((prev) => !prev);
   }
