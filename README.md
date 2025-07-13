@@ -1,6 +1,7 @@
 # E-Commerce App Template
 
 Welcome to the E-Commerce App Template! This project is designed as a starting point for developers looking to build an e-commerce platform using React and Node.js. It serves both as a practical exercise for myself and as a template for others to customize and expand upon.
+Please if you have any feedback do tell me, as this is my first MERN project.
 
 ## Table of Contents
 
