@@ -46,7 +46,7 @@ export default function Navbar() {
               <span>{userName}</span>
             </div>
           </div>
-          {toggleLogin && <Login />}
+          {toggleLogin && <Login toggle={login_modal} />}
         </div>
 
         <div className="lower-navbar">
