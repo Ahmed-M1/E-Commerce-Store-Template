@@ -10,7 +10,7 @@
 }
 .form{
     padding:100px;
-     background-color: rgb(37, 32, 26);
+    background-color: rgb(203, 197, 190);
 }
 form input{
     
@@ -19,7 +19,7 @@ form input{
 .form-container{
     height:70vh;
     width:50vw;
-    background-color: rgb(37, 32, 26);
+    background-color: rgb(203, 197, 190);
 }
 .login-btn{
     background-color: rgb(169, 132, 83);
@@ -31,7 +31,7 @@ form input{
 .close-login-form{
     width:40px;
     float:right;
-    color:rgb(249, 247, 247);
+    color:rgb(0, 0, 0);
     background-color:rgba(240, 248, 255, 0) ;
     margin-top:10px;
 

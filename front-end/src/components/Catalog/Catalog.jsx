@@ -9,31 +9,23 @@ export default function Catalog(props) {
   const [products, setProducts] = useState([]);
   const [showError, setShowError] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [connAttempt, setConnAttempt] = useState(0);
   const params = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        await fetchProducts(setProducts, params.page_name, setShowError);
-      } catch (error) {
-        if (error.message === "Invalid page name") {
-          navigate("/"); // Redirect to error page
-        } else {
-          setShowError(true);
-        }
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, [params.page_name, navigate]);
-
+    fetchProducts(
+      setProducts,
+      params.page_name,
+      setShowError,
+      setLoading,
+      navigate,
+      setConnAttempt
+    );
+  }, [params.page_name]);
   const catalogItems = products.map((product) => (
     <CatalogItem key={product.id} product={product} />
   ));
-
   return (
     <section className="catalog">
       <h1 className="catalog-header">{props.heading}</h1>
