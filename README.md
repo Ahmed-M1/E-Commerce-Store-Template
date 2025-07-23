@@ -30,8 +30,7 @@ Please if you have any feedback do tell me, as this is my first MERN project.
 - **Backend:**
   - Node.js
   - Express.js
-  - MongoDB (for database management) -> TBD
-  - Mongoose (for object modeling) -> TBD
+  - MongoDB (for database management) 
 
 ## Getting Started
 
