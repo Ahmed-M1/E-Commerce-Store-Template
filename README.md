@@ -8,6 +8,7 @@ Please if you have any feedback do tell me, as this is my first MERN project.
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
+- [Preview](#preview)
 
 ## Features
 
@@ -41,3 +42,11 @@ To get started with this project, follow these steps:
    git clone https://github.com/Ahmed-M1/E-Commerce-Store-Template.git
    cd E-Commerce-Store-Template
    ```
+## Preview
+<img width="3776" height="1832" alt="image" src="https://github.com/user-attachments/assets/e5bb4753-24ee-4087-b0dc-440a8009e17d" />
+<img width="3777" height="1832" alt="image" src="https://github.com/user-attachments/assets/8d0f6b88-c0d6-4d74-8a6d-a2cb7185d642" />
+<img width="3772" height="1835" alt="image" src="https://github.com/user-attachments/assets/b653a731-c5e2-4cde-8143-468cf2e377d9" />
+<img width="3764" height="1817" alt="image" src="https://github.com/user-attachments/assets/ec560f47-0d74-4f62-984b-7ba05218b5dc" />
+
+
+
